@@ -1,6 +1,22 @@
 const express = require('express')
-const didKeyDriver = require('did-method-generic').driver({method:"moncon"})
+const DidKeyDriver = require('did-method-generic')
 const app = express()
+const svc =   [  {
+  "id": "#linkedin",
+  "type": "linkedin",
+  "serviceEndpoint": "https://www.linkedin.com/company/infinitelabs-co"
+},
+{
+  "id": "#github",
+  "type": "github",
+  "serviceEndpoint": ""
+},
+{
+  "id": "#gitlab",
+  "type": "gitlab",
+  "serviceEndpoint": "https://gitlab.com/infinite-labs"
+}]
+const didKeyDriver =  DidKeyDriver.driver({method:"moncon",service:svc})
 app.get('/1.0/identifiers/*',async function (req, res) {  
   try{
     const url = req.url
@@ -11,8 +27,9 @@ app.get('/1.0/identifiers/*',async function (req, res) {
   console.log('Resolving DID: ' + did)
   res.setHeader('Content-Type', 'application/json');
   return res.json(meta)
-  }catch{
-      return res.json({hola:'error'})
+  }
+  catch(err){
+    return res.status(500).send(err.message)
   }
 })
 
