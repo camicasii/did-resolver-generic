@@ -2,7 +2,7 @@ version: "3"
 services:  
   did-api:
     #       image: node:14-buster
-    build: ./
+    build: ./docker
     restart: always
     user: "node"
     working_dir: /home/node/app
