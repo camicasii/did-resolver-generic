@@ -20,8 +20,8 @@ did:moncon:z6MkshpV2x1iUcipxdKP4Jb3ZoznwDN19eAMHwXZ14iBRKF3
 ## Build and Run (Docker)
 
 ```
-docker build -f ./docker/Dockerfile . -t universalresolver/driver-did-key
-docker run -p 8080:8081 universalresolver/did-resolver-generic
+docker build -f ./docker/Dockerfile . -t camicasii/didresolver-g
+docker run -p 8080:8081 docker pull camicasii/didresolver-g
 curl -X GET http://localhost:8080/1.0/identifiers/did:moncon:z6MkuwvCt6G5jB6oZhG9pcVuoX5yhxeWV2jzFNZMw5G4pxNu
 ```
 

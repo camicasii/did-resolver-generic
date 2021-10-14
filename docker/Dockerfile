@@ -6,7 +6,7 @@ MAINTAINER Jhonattan Ramirez <camicasii@hotmail.com>
 # build driver-did-key
 
 WORKDIR /usr/src/app
-COPY ../ .
+COPY . .
 RUN npm install
 # done
 
