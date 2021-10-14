@@ -1,0 +1,28 @@
+version: "3"
+services:  
+  did-api:
+    #       image: node:14-buster
+    build: ./
+    restart: always
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    depends_on:
+      - "mongo"
+    #        ports:
+    #            - 8080:8080
+    expose:
+      - "8081"
+    command: "npm start"
+    environment:
+      - VIRTUAL_HOST=did.driver.moncon.co
+      - VIRTUAL_PORT=8081
+      - LETSENCRYPT_HOST=did.driver.moncon.co
+      - LETSENCRYPT_EMAIL=Hello@infinitelabs.co
+    networks:
+      - nginx_proxy     
+
+networks:
+  nginx_proxy:
+    external: true

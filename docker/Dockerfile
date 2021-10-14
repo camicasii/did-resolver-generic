@@ -12,6 +12,6 @@ COPY . .
 
 # done
 
-EXPOSE 8080
+EXPOSE 8081
 
-CMD [ "node", "index.js" ]
+#CMD [ "node", "index.js" ]

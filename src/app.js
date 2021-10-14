@@ -4,17 +4,17 @@ const app = express()
 const svc =   [  {
   "id": "#linkedin",
   "type": "linkedin",
-  "serviceEndpoint": "https://www.linkedin.com/company/infinitelabs-co"
+  "serviceEndpoint": "https://www.linkedin.com/company/moncon/"
 },
 {
-  "id": "#github",
+  "id": "#telegram",
+  "type": "telegram",
+  "serviceEndpoint": "https://t.me/monconcommunity"
+},
+{
+  "id": "#gihhub",
   "type": "github",
-  "serviceEndpoint": ""
-},
-{
-  "id": "#gitlab",
-  "type": "gitlab",
-  "serviceEndpoint": "https://gitlab.com/infinite-labs"
+  "serviceEndpoint": "https://github.com/LedgerProject/moncon"
 }]
 const didKeyDriver =  DidKeyDriver.driver({method:"moncon",service:svc})
 app.get('/1.0/identifiers/*',async function (req, res) {  

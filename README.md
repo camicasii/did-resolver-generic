@@ -2,7 +2,7 @@
 
 # Universal Resolver Driver: example
 
-This is a [Universal Resolver](https://github.com/decentralized-identity/universal-resolver/) driver for **did:key** identifiers.
+This is a [Universal Resolver](https://github.com/decentralized-identity/universal-resolver/) driver for **did:moncon** identifiers.
 
 ## Specifications
 
@@ -12,17 +12,17 @@ This is a [Universal Resolver](https://github.com/decentralized-identity/univers
 ## Example DIDs
 
 ```
-did:key:z6Mkfriq1MqLBoPWecGoDLjguo1sB9brj6wT3qZ5BxkKpuP6
-did:key:z6MksQ35B5bwZDQq4QKuhQW2Sv6dcqwg4PqcSFf67pdgrtjB
-did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH
+did:moncon:z6MkfrVYbLejh9Hv7Qmx4B2P681wBfPFkcHkbUCkgk1Q8LoT
+did:moncon:z6MkwQpQz71n57h56eg5SReCyDnPQn23apc9Dq6BphFyP1yK
+did:moncon:z6MkshpV2x1iUcipxdKP4Jb3ZoznwDN19eAMHwXZ14iBRKF3
 ```
 
 ## Build and Run (Docker)
 
 ```
 docker build -f ./docker/Dockerfile . -t universalresolver/driver-did-key
-docker run -p 8080:8080 universalresolver/driver-did-key
-curl -X GET http://localhost:8080/1.0/identifiers/did:key:z6Mkfriq1MqLBoPWecGoDLjguo1sB9brj6wT3qZ5BxkKpuP6
+docker run -p 8080:8081 universalresolver/driver-did-key
+curl -X GET http://localhost:8080/1.0/identifiers/did:moncon:z6MkuwvCt6G5jB6oZhG9pcVuoX5yhxeWV2jzFNZMw5G4pxNu
 ```
 
 ## Build and Run (NodeJS)
