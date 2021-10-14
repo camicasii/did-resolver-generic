@@ -11,6 +11,8 @@ This is a [Universal Resolver](https://github.com/decentralized-identity/univers
 
 ## Example DIDs
 
+Endpoint: https://did.driver.moncon.co/1.0/identifiers/<did:monco:.....>
+
 ```
 did:moncon:z6MkfrVYbLejh9Hv7Qmx4B2P681wBfPFkcHkbUCkgk1Q8LoT
 did:moncon:z6MkwQpQz71n57h56eg5SReCyDnPQn23apc9Dq6BphFyP1yK
