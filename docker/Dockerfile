@@ -1,7 +1,7 @@
 # Dockerfile for universalresolver/driver-did-key
 
 FROM node:14-alpine
-MAINTAINER Markus Sabadello <markus@danubetech.com>
+MAINTAINER Jhonattan Ramirez <camicasii@hotmail.com>
 
 # build driver-did-key
 
