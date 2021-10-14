@@ -6,10 +6,8 @@ MAINTAINER Jhonattan Ramirez <camicasii@hotmail.com>
 # build driver-did-key
 
 WORKDIR /usr/src/app
-COPY ../package.json ./
-RUN npm install
 COPY ../ .
-
+RUN npm install
 # done
 
 EXPOSE 8081
