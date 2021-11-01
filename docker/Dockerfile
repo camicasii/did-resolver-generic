@@ -10,6 +10,6 @@ COPY . .
 RUN npm install
 # done
 
-EXPOSE 8081
+EXPOSE 8080
 
-#CMD [ "node", "index.js" ]
+CMD [ "node", "index.js" ]
